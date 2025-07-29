@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tier-on-Tier Shutters | Grove Blind & Shutters Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#83c6b9',
+            dark: '#083c3a'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-black font-sans">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 sticky top-0 bg-white z-50 shadow-sm" role="navigation">
+    <a href="/index.html" class="text-xl font-serif font-semibold text-dark">Grove</a>
+    <nav class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="/index.html#about" class="hover:text-primary">About</a>
+      <a href="/index.html#services" class="hover:text-primary">Services</a>
+      <a href="/pages/our-shutters.html" class="hover:text-primary">Our Shutters</a>
+      <a href="/index.html#gallery" class="hover:text-primary">Gallery</a>
+      <a href="/index.html#why" class="hover:text-primary">Why Choose Us</a>
+      <a href="/index.html#quote" class="hover:text-primary">Book</a>
+    </nav>
+    <div class="md:hidden" x-data="{ open: false }">
+      <button @click="open = !open" class="text-dark" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <div x-show="open" x-transition class="absolute top-full left-0 w-full bg-white shadow-md rounded-b-lg py-4 mt-2 text-center space-y-2">
+        <a href="/index.html#about" class="block">About</a>
+        <a href="/index.html#services" class="block">Services</a>
+        <a href="/pages/our-shutters.html" class="block">Our Shutters</a>
+        <a href="/index.html#gallery" class="block">Gallery</a>
+        <a href="/index.html#why" class="block">Why Choose Us</a>
+        <a href="/index.html#quote" class="block">Book</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center min-h-[60vh] flex items-center justify-center text-center" style="background-image: url('https://www.swiftdirectblinds.co.uk/media/catalog/product/cache/8380b00984bda08fd1b230dd8f121350/s/h/shutters_dining__room_fullheight_plp.jpg');">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 text-white px-6" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-serif font-semibold mb-4">Tier-on-Tier Shutters</h1>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto">Flexible and elegant, Tier-on-Tier Shutters give you independent control of top and bottom panels for maximum light and privacy versatility.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-20 px-6 md:px-12 max-w-6xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-serif text-dark mb-6">Why Choose Tier-on-Tier Shutters?</h2>
+    <p class="text-lg leading-relaxed mb-6">Tier-on-Tier Shutters are designed for homeowners who want it all: privacy, light control, and style. With panels that open independently, you can enjoy natural daylight at the top while keeping the lower half closed for street-level privacy.</p>
+    <ul class="list-disc pl-6 space-y-3 text-gray-700">
+      ✅ Independent top and bottom panel operation <br>
+      ✅ Perfect for bay windows and street-facing rooms <br>
+      ✅ Provides versatile light and privacy solutions <br>
+      ✅ Adds character and sophistication to any space <br>
+      ✅ Available in custom finishes and louvre sizes <br>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary text-white py-20 text-center px-6" data-aos="fade-up">
+    <h2 class="text-4xl font-serif mb-4">Enjoy Flexibility with Tier-on-Tier Shutters</h2>
+    <p class="text-lg mb-6 max-w-2xl mx-auto">Book your free consultation and experience how Tier-on-Tier Shutters can give you the perfect balance of light, privacy, and style.</p>
+    <a href="mailto:contact@groveblinds.co.uk" class="bg-white text-primary font-medium px-8 py-4 rounded-full text-lg hover:bg-gray-100 transition transform hover:scale-105">Book Your Appointment</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#f9f9f9] text-gray-700 pt-16 pb-8 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="text-xl font-serif font-semibold text-dark mb-4">Grove Blind & Shutters Co.</h3>
+        <p class="text-sm text-gray-600">Bespoke shutters, crafted with precision and care across Greater Manchester.</p>
+      </div>
+      <div>
+        <h4 class="text-base font-semibold text-dark mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm">
+          <li><a href="/index.html" class="hover:text-primary">Home</a></li>
+          <li><a href="/pages/our-shutters.html" class="hover:text-primary">Our Shutters</a></li>
+          <li><a href="/index.html#quote" class="hover:text-primary">Book</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-base font-semibold text-dark mb-2">Contact</h4>
+        <ul class="space-y-1 text-sm">
+          <li>📍 Greater Manchester</li>
+          <li>📞 <a href="tel:01234567890" class="hover:text-primary">01234 567 890</a></li>
+          <li>📧 <a href="mailto:contact@groveblinds.co.uk" class="hover:text-primary">contact@groveblinds.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-xs text-gray-500">&copy; 2025 Grove Blind & Shutters Co. All rights reserved.</div>
+  </footer>
+
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>

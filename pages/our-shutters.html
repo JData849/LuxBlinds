@@ -55,32 +55,12 @@
 </head>
 <body class="bg-white text-black font-sans" x-data>
 
-  <header class="flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 sticky top-0 bg-white z-50 shadow-sm" role="navigation">
-    <a href="/index.html" class="text-xl font-serif font-semibold text-dark">Grove</a>
-    <nav class="hidden md:flex space-x-6 text-sm font-medium">
-      <a href="/index.html#about" class="hover:text-primary">About</a>
-      <a href="/index.html#services" class="hover:text-primary">Services</a>
-      <a href="/pages/our-shutters.html" class="hover:text-primary">Our Shutters</a>
-      <a href="/index.html#gallery" class="hover:text-primary">Gallery</a>
-      <a href="/index.html#why" class="hover:text-primary">Why Choose Us</a>
-      <a href="/index.html#quote" class="hover:text-primary">Book</a>
-    </nav>
-    <div class="md:hidden" x-data="{ open: false }">
-      <button @click="open = !open" class="text-dark" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <div x-show="open" x-transition class="absolute top-full left-0 w-full bg-white shadow-md rounded-b-lg py-4 mt-2 text-center space-y-2">
-        <a href="/index.html#about" class="block">About</a>
-        <a href="/index.html#services" class="block">Services</a>
-        <a href="/pages/our-shutters.html" class="block">Our Shutters</a>
-        <a href="/index.html#gallery" class="block">Gallery</a>
-        <a href="/index.html#why" class="block">Why Choose Us</a>
-        <a href="/index.html#quote" class="block">Book</a>
-      </div>
-    </div>
-  </header>
+   <div id="header"></div>
+  <script>
+    fetch('/components/header.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+  </script>
 
   <!-- HERO SECTION -->
   <section class="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center" style="background-image: url('https://www.shutterlyfabulous.com/wp-content/uploads/2021/05/Vivid-White-min-1024x724.jpg');">
@@ -190,8 +170,61 @@
         </div>
       </div>
     </div>
+    
   </section>
-  
+
+  <section id="owner recommendations" class="py-24 px-6 md:px-12" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center mb-16"><div class="mt-24">
+  <h3 class="text-4xl font-serif text-dark mb-12 text-center" data-aos="fade-up">
+    Owners’ Recommendations
+  </h3>
+
+  <div class="grid md:grid-cols-2 gap-12">
+    
+    <!-- Gareth -->
+    <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-xl transition flex flex-col space-y-6" data-aos="fade-right">
+      <div class="flex items-center space-x-4">
+        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md">
+          <img src="/images/gareth.jpg" alt="Gareth" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <h4 class="text-2xl font-serif font-semibold text-dark">Gareth</h4>
+        </div>
+      </div>
+      <p class="text-gray-700 leading-relaxed">
+        Gareth recommends our beautiful range of UK‑made shutters with a fast lead time 
+        and excellent quality — they’re what he has throughout his own home. 
+        <br><br>
+        <span class="italic text-dark">“They provide excellent insulation not only from the heat and cold but from noise too. 
+        Shutters work so well for our family and look great inside and out at our home in Lowton.”</span>
+      </p>
+    </div>
+
+    <!-- Gavin -->
+    <div class="bg-white p-10 rounded-3xl shadow-lg hover:shadow-xl transition flex flex-col space-y-6" data-aos="fade-left" data-aos-delay="150">
+      <div class="flex items-center space-x-4">
+        <div class="w-20 h-20 rounded-full overflow-hidden shadow-md">
+          <img src="/images/gavin.jpg" alt="Gavin" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <h4 class="text-2xl font-serif font-semibold text-dark">Gavin</h4>
+        </div>
+      </div>
+      <p class="text-gray-700 leading-relaxed">
+        Gavin also has shutters, but he says they aren’t always the perfect solution for every window. 
+        <br><br>
+        <span class="italic text-dark">“I find that patio doors and bi‑folds are sometimes better covered with a different solution. 
+        I have perfect‑fit blinds at my home in Atherton — they are so flexible and neat, 
+        and I love that they work so well for us, particularly where we needed blackout on our patio doors.”</span>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+  </section>
+
 <!-- Measurement to Cost Calculator -->
 <section id="calculator" class="bg-[#f9f9f9] py-20 px-6 md:px-12">
   <div class="max-w-4xl mx-auto text-center" x-data="calculator()">

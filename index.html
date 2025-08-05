@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grove Blind & Shutters Co.</title>
+  <title>Grove Blind & Shutter Co.</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -85,38 +85,19 @@
 </head>
 <body class="bg-white text-black font-sans">
 
-  <header class="flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 sticky top-0 bg-white z-50 shadow-sm" role="navigation">
-    <a href="/index.html" class="text-xl font-serif font-semibold text-dark">Grove</a>
-    <nav class="hidden md:flex space-x-6 text-sm font-medium">
-      <a href="/index.html#about" class="hover:text-primary">About</a>
-      <a href="/index.html#services" class="hover:text-primary">Services</a>
-      <a href="/pages/our-shutters.html" class="hover:text-primary">Our Shutters</a>
-      <a href="/index.html#gallery" class="hover:text-primary">Gallery</a>
-      <a href="/index.html#why" class="hover:text-primary">Why Choose Us</a>
-      <a href="/index.html#quote" class="hover:text-primary">Book</a>
-    </nav>
-    <div class="md:hidden" x-data="{ open: false }">
-      <button @click="open = !open" class="text-dark" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <div x-show="open" x-transition class="absolute top-full left-0 w-full bg-white shadow-md rounded-b-lg py-4 mt-2 text-center space-y-2">
-        <a href="/index.html#about" class="block">About</a>
-        <a href="/index.html#services" class="block">Services</a>
-        <a href="/pages/our-shutters.html" class="block">Our Shutters</a>
-        <a href="/index.html#gallery" class="block">Gallery</a>
-        <a href="/index.html#why" class="block">Why Choose Us</a>
-        <a href="/index.html#quote" class="block">Book</a>
-      </div>
-    </div>
-  </header>
+  <div id="header"></div>
+  <script>
+    fetch('/components/header.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+  </script>
+
 
   <!-- HERO SECTION -->
   <section class="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center" style="background-image: url('./images/blinds.jpg');">
     <div class="absolute inset-0 bg-white/60 backdrop-blur-md"></div>
     <div class="relative z-10 max-w-4xl px-6 animate-fade-in-up" data-aos="fade-up">
-      <h1 class="text-5xl md:text-7xl font-serif font-semibold text-dark leading-tight transition-all duration-500 hover:tracking-wide">Grove Blind & Shutters Co.</h1>
+      <h1 class="text-5xl md:text-7xl font-serif font-semibold text-dark leading-tight transition-all duration-500 hover:tracking-wide">Grove Blind & Shutter Co.</h1>
       <p class="mt-6 text-lg md:text-2xl text-gray-700 transition-opacity duration-700 hover:opacity-90">Elegance. Simplicity. Craftsmanship you can feel.</p>
       <a href="#quote" class="mt-10 inline-block bg-primary text-white px-8 py-3 rounded-full text-lg hover:bg-dark transition duration-300 transform hover:scale-105">Book Your Free Appointment</a>
     </div>
@@ -142,11 +123,11 @@
 
 <p class="text-lg leading-relaxed">At Grove, we proudly lead with a <strong>Shutters First</strong> philosophy. To us, shutters aren't just a feature—they're the foundation of any great interior. From the moment a customer reaches out, our mindset is to design and deliver shutters that make an architectural statement and transform light, privacy, and ambiance within the home.</p>
 
-<p class="text-lg leading-relaxed">Shutters offer a permanence that blinds and curtains simply cannot. They're crafted to fit your windows with precision, acting as a built-in enhancement to your home’s design. The clean lines, timeless style, and structural quality of shutters elevate both contemporary and traditional spaces. This is why we’ve chosen to build our entire business around them.</p>
+<p class="text-lg leading-relaxed">Shutters offer a permanence that blinds and curtains simply cannot. They're crafted to fit your windows with precision, acting as a built-in enhancement to your home's design. The clean lines, timeless style, and structural quality of shutters elevate both contemporary and traditional spaces. This is why we've chosen to build our entire business around them.</p>
 
 <p class="text-lg leading-relaxed">By focusing exclusively on shutters, we've developed an eye for detail that generalists can't match. We understand the importance of every slat, hinge, and frame depth. We obsess over how light filters through your louvres at different times of day, how finishes complement your interiors, and how framing choices enhance both curb appeal and internal harmony.</p>
 
-<p class="text-lg leading-relaxed">We know homeowners want simplicity and confidence. That’s why our team guides every client from initial concept to installation, demystifying technical jargon and turning visions into made-to-measure solutions. We don't upsell with pressure—we educate with care, and we always recommend what works best for your space, not our margins.</p>
+<p class="text-lg leading-relaxed">We know homeowners want simplicity and confidence. That's why our team guides every client from initial concept to installation, demystifying technical jargon and turning visions into made-to-measure solutions. We don't upsell with pressure—we educate with care, and we always recommend what works best for your space, not our margins.</p>
 
 <p class="text-lg leading-relaxed">In an industry filled with catalogue options and templated service, Grove delivers something different: a boutique, expert-driven experience rooted in clarity, design integrity, and personal connection. Our shutters are built to last—and so are the relationships we form with the homeowners who choose us.</p>
 
@@ -179,6 +160,7 @@
       </div>
       
     </div>
+
   </section>
 
   <!-- SERVICES SECTION -->
@@ -256,8 +238,8 @@
 <section id="coverage" class="bg-white text-gray-800 py-24 px-6 md:px-12 overflow-hidden">
     <div class="max-w-6xl mx-auto space-y-12" data-aos="fade-up">
       <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-4xl font-serif text-dark mb-4">Areas We Cover</h2>
-        <p class="text-lg leading-relaxed">Grove Blind & Shutters Co. proudly serves homes and businesses across Greater Manchester and the North West. From Tyldesley and Leigh to Warrington, Worsley, and beyond - if you're in the region, we're likely nearby.</p>
+        <h2 class="text-5xl font-serif text-dark text-center mb-12">Areas We Cover</h2>
+        <p class="text-lg leading-relaxed">Grove Blind & Shutter Co. proudly serves homes and businesses across Greater Manchester and the North West. From Tyldesley and Leigh to Warrington, Worsley, and beyond - if you're in the region, we're likely nearby.</p>
       </div>
   
       <div class="w-full overflow-hidden rounded-2xl shadow-md">
@@ -273,6 +255,89 @@
       </div>
     </div>
   </section>
+
+  <!-- TESTIMONIALS SECTION -->
+<section id="testimonials" class="bg-white py-32 px-6 md:px-12 overflow-hidden relative">
+  <div class="max-w-6xl mx-auto text-center relative">
+    <h2 class="text-5xl font-serif text-dark text-center mb-12" data-aos="fade-up">Kind Words From Our Clients</h2>
+
+   
+<div x-data="testimonialSlider()" x-init="init()" class="relative h-[260px] md:h-[220px]">
+
+  <!-- Testimonial Wrapper -->
+  <div class="relative h-full">
+    <template x-for="(t, index) in testimonials" :key="index">
+      <div x-show="active === index"
+           x-transition:enter="transition ease-out duration-700"
+           x-transition:enter-start="opacity-0 scale-95"
+           x-transition:enter-end="opacity-100 scale-100"
+           x-transition:leave="transition ease-in duration-500"
+           x-transition:leave-start="opacity-100 scale-100"
+           x-transition:leave-end="opacity-0 scale-95"
+           class="absolute inset-0 flex flex-col items-center justify-center">
+        <p class="text-xl md:text-2xl italic text-gray-700 leading-relaxed max-w-3xl px-6">“<span x-text="t.text"></span>”</p>
+        <span class="mt-6 block text-dark font-serif text-base md:text-lg font-medium" x-text="t.name"></span>
+      </div>
+    </template>
+  </div>
+
+  <!-- Arrows -->
+  <button @click="prev" aria-label="Previous"
+          class="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-primary hover:text-white transition">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+  <button @click="next" aria-label="Next"
+          class="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-primary hover:text-white transition">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+
+  <!-- Dots -->
+  <div class="flex justify-center mt-12 space-x-3">
+    <template x-for="(t, index) in testimonials" :key="'dot-'+index">
+      <div @click="active = index"
+           :class="active === index ? 'bg-primary' : 'bg-gray-300'"
+           class="w-3 h-3 rounded-full cursor-pointer transition"></div>
+    </template>
+  </div>
+  <!-- Google Reviews Link -->
+  <a href="https://share.google/TaJtTHAN4gCwhLQel" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="text-primary font-medium hover:text-dark transition underline underline-offset-4"><br>
+     Click here to find what everyone said →
+  </a>
+</div>
+</section>
+<script>
+function testimonialSlider() {
+  return {
+    testimonials: [],
+    active: 0,
+    timer: null,
+
+    async init() {
+      try {
+        const res = await fetch('/reviews.json'); // Adjust path if needed
+        this.testimonials = await res.json();
+
+        // autoplay every 7s
+        this.timer = setInterval(() => this.next(), 7000);
+      } catch (e) {
+        console.error('Failed to load testimonials:', e);
+      }
+    },
+
+    next() { this.active = (this.active + 1) % this.testimonials.length; },
+    prev() { this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length; }
+  }
+}
+</script>
+
+
   <!-- BOOKING / QUOTE SECTION -->
 <section id="quote" class="relative bg-primary text-white py-32 px-6 md:px-12 overflow-hidden">
     <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
@@ -288,7 +353,7 @@
   <footer class="bg-[#f9f9f9] text-gray-700 pt-16 pb-8 px-6 md:px-12">
     <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
       <div>
-        <h3 class="text-xl font-serif font-semibold text-dark mb-4">Grove Blind & Shutters Co.</h3>
+        <h3 class="text-xl font-serif font-semibold text-dark mb-4">Grove Blind & Shutter Co.</h3>
         <p class="text-sm text-gray-600">Bespoke shutters, crafted with precision and care across Greater Manchester.</p>
       </div>
       <div>
@@ -308,7 +373,7 @@
         </ul>
       </div>
     </div>
-    <div class="mt-12 text-center text-xs text-gray-500">&copy; 2025 Grove Blind & Shutters Co. All rights reserved.</div>
+    <div class="mt-12 text-center text-xs text-gray-500">&copy; 2025 Grove Blind & Shutter Co. All rights reserved.</div>
   </footer>
   
   <!-- SCRIPTS -->

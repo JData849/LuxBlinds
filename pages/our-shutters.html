@@ -5,40 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Shutters | Grove Blind & Shutter Co.</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#83c6b9',
-            dark: '#083c3a'
-          },
-          fontFamily: {
-            serif: ['Playfair Display', 'serif'],
-            sans: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .scroll-down { animation: bounce 2s infinite; }
-    @keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
-
-    /* Boutique Parallax */
-    .parallax {
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+  <link rel="stylesheet" href="/dist/output.css">
 </head>
 <body class="bg-white text-black font-sans" x-data>
 
@@ -81,7 +53,7 @@
     <!-- Full Height -->
     <a href="full-height-shutters.html" class="block bg-white rounded-3xl shadow-lg overflow-hidden transition hover:shadow-2xl">
       <div class="relative">
-        <img src="/images/shutters1.jpg" alt="Full height plantation shutters installed in dining room" 
+        <img src="/images/shutters1.webp" alt="Full height plantation shutters installed in dining room" 
              class="w-full h-48 md:h-64 object-cover">
         <!-- Mobile Overlay -->
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:hidden">
@@ -97,7 +69,7 @@
     <!-- Café Style -->
     <a href="cafe-style-shutters.html" class="block bg-white rounded-3xl shadow-lg overflow-hidden transition hover:shadow-2xl">
       <div class="relative">
-        <img src="/images/shutters2.png" alt="Café style shutters covering lower half of window in kitchen" 
+        <img src="/images/shutters2.webp" alt="Café style shutters covering lower half of window in kitchen" 
              class="w-full h-48 md:h-64 object-cover">
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:hidden">
           <h3 class="text-xl font-serif text-white">Café Style Shutters</h3>
@@ -127,7 +99,7 @@
     <!-- Waterproof -->
     <a href="waterproof-shutters.html" class="block bg-white rounded-3xl shadow-lg overflow-hidden transition hover:shadow-2xl">
       <div class="relative">
-        <img src="/images/shutters5.jpg" alt="Waterproof shutters installed in a bathroom window" 
+        <img src="/images/shutters5.webp" alt="Waterproof shutters installed in a bathroom window" 
              class="w-full h-48 md:h-64 object-cover">
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:hidden">
           <h3 class="text-xl font-serif text-white">Waterproof Shutters</h3>
@@ -154,41 +126,77 @@
       </div>
     </a>
 
-    <!-- Blinds Card -->
-    <a href="blinds.html" class="block bg-gradient-to-br from-primary to-dark text-white rounded-3xl shadow-lg overflow-hidden transition hover:shadow-2xl flex items-center justify-center p-12 text-center">
-      <div>
-        <h3 class="text-2xl font-serif font-semibold mb-4">View Our Selection of Blinds</h3>
-        <p class="text-sm md:text-base text-white/80 mb-6">Discover our beautifully tailored blinds - the perfect complement or alternative to shutters.</p>
-        <span class="inline-block bg-white text-primary font-medium px-6 py-2 rounded-full text-sm hover:bg-gray-100 transition transform hover:scale-105">Explore Blinds</span>
-      </div>
-    </a>
+  <!-- Blinds Card -->
+<a href="blinds.html" class="block bg-gradient-to-br from-primary to-dark text-white rounded-3xl shadow-lg overflow-hidden transition hover:shadow-2xl flex items-center justify-center p-12 text-center">
+  <div>
+    <!-- Hide heading and paragraph on mobile, show on md+ -->
+    <h3 class="hidden md:block text-2xl font-serif font-semibold mb-4">View Our Selection of Blinds</h3>
+    <p class="hidden md:block text-sm md:text-base text-white/80 mb-6">Discover our beautifully tailored blinds – the perfect complement or alternative to shutters.</p>
+    
+    <!-- Always visible -->
+    <span class="inline-block bg-white text-primary font-medium px-6 py-2 rounded-full text-sm hover:bg-gray-100 transition transform hover:scale-105">
+      Explore Blinds
+    </span>
   </div>
+</a>
 </section>
 
 
+ <!-- WHY SHUTTERS -->
+<section id="why" class="bg-[#f9f9f9] py-32 px-6 md:px-20" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <span class="uppercase tracking-[.3em] text-primary text-xs font-medium">The Benefits</span>
+      <h2 class="text-5xl font-serif text-dark mb-6">Why Choose Shutters?</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">Shutters are more than window coverings-they’re a statement of style, purpose, and enduring quality that elevates every room.</p>
+    </div>
 
-  <!-- WHY SHUTTERS -->
-  <section id="why" class="bg-[#f9f9f9] py-32 px-6 md:px-20" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto text-center">
-      <span class="uppercase tracking-widest text-primary text-sm font-medium">The Benefits</span>
-      <h2 class="text-5xl font-serif text-dark mb-8">Why Shutters?</h2>
-      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-16">Shutters don’t just look beautiful-they provide insulation, privacy, and timeless style that lasts a lifetime.</p>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white p-10 rounded-3xl shadow hover:shadow-xl transition">
-          <h3 class="text-2xl font-serif text-dark mb-3">Elegant Light Control</h3>
-          <p class="text-gray-600">Tilt slats to balance natural light with privacy.</p>
-        </div>
-        <div class="bg-white p-10 rounded-3xl shadow hover:shadow-xl transition">
-          <h3 class="text-2xl font-serif text-dark mb-3">Energy Efficiency</h3>
-          <p class="text-gray-600">Reduce heat loss & block harsh summer rays.</p>
-        </div>
-        <div class="bg-white p-10 rounded-3xl shadow hover:shadow-xl transition">
-          <h3 class="text-2xl font-serif text-dark mb-3">Timeless Aesthetics</h3>
-          <p class="text-gray-600">Classic lines & bespoke finishes for every space.</p>
-        </div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Card -->
+      <div class="group rounded-3xl bg-white p-10 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+        <h3 class="text-2xl font-serif text-dark mb-4 z-10 relative">Elegant Light Control</h3>
+        <p class="text-gray-600 leading-relaxed z-10 relative">Tilt and adjust to craft your perfect ambiance-soft light, total shade, or anything in between.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="group rounded-3xl bg-white p-10 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+        <h3 class="text-2xl font-serif text-dark mb-4 z-10 relative">Energy Efficiency</h3>
+        <p class="text-gray-600 leading-relaxed z-10 relative">Natural insulation that reduces heat loss in winter and keeps you cool in summer.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="group rounded-3xl bg-white p-10 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+        <h3 class="text-2xl font-serif text-dark mb-4 z-10 relative">Timeless Aesthetics</h3>
+        <p class="text-gray-600 leading-relaxed z-10 relative">Understated luxury that complements modern, heritage, and everything in between.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="group rounded-3xl bg-white p-10 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+        <h3 class="text-2xl font-serif text-dark mb-4 z-10 relative">Made to Measure</h3>
+        <p class="text-gray-600 leading-relaxed z-10 relative">Crafted for a perfect fit-no gaps, no fuss, just seamless installation.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="group rounded-3xl bg-white p-10 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+        <h3 class="text-2xl font-serif text-dark mb-4 z-10 relative">Privacy on Demand</h3>
+        <p class="text-gray-600 leading-relaxed z-10 relative">Enjoy open light or complete discretion, with total control over visibility.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="group rounded-3xl bg-white p-10 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl"></div>
+        <h3 class="text-2xl font-serif text-dark mb-4 z-10 relative">Effortless Maintenance</h3>
+        <p class="text-gray-600 leading-relaxed z-10 relative">No cords, no clutter-just clean lines and surfaces that stay beautiful with a quick wipe.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- OWNERS' RECOMMENDATIONS -->
   <section id="owners" class="py-32 px-6 md:px-12 bg-white" data-aos="fade-up">
@@ -198,7 +206,7 @@
         <!-- Gareth -->
         <div class="bg-[#f9f9f9] p-10 rounded-3xl shadow-lg hover:shadow-xl transition" data-aos="fade-right">
           <div class="flex items-center space-x-5 mb-6">
-            <!--<img src="/images/gareth.jpg" alt="Gareth" class="w-20 h-20 rounded-full object-cover shadow">-->
+            <!--<img src="/images/gareth.webp" alt="Gareth" class="w-20 h-20 rounded-full object-cover shadow">-->
             <h4 class="text-2xl font-serif font-semibold text-dark">Gareth</h4>
           </div>
           <p class="text-gray-700 leading-relaxed">“Our beautiful UK‑made shutters are what I’ve chosen throughout my own home in Lowton. They provide superb insulation from heat, cold, and even noise, while looking fantastic inside and out.”</p>
@@ -206,7 +214,7 @@
         <!-- Gavin -->
         <div class="bg-[#f9f9f9] p-10 rounded-3xl shadow-lg hover:shadow-xl transition" data-aos="fade-left" data-aos-delay="100">
           <div class="flex items-center space-x-5 mb-6">
-            <!--<img src="/images/gavin.jpg" alt="Gavin" class="w-20 h-20 rounded-full object-cover shadow">-->
+            <!--<img src="/images/gavin.webp" alt="Gavin" class="w-20 h-20 rounded-full object-cover shadow">-->
             <h4 class="text-2xl font-serif font-semibold text-dark">Gavin</h4>
           </div>
           <p class="text-gray-700 leading-relaxed">“Not every window suits shutters. For my patio doors in Atherton, I use perfect‑fit blinds-they’re neat, flexible, and provide excellent blackout when needed.”</p>

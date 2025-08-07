@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@source "./index.html";
+@source "./components/**/*.html";
+@source "./pages/**/*.html";
+@source "./**/*.js";
+
+/* Define your theme tokens */
+@theme {
+  --color-primary: #83c6b9;
+  --color-dark: #083c3a;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animation-fade-in-up: fade-in-up 1s ease-out forwards;
+}
+.nav-link {
+  position: relative;
+  transition: all 0.3s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+html {
+      scroll-behavior: smooth;
+    }
+    .nav-link {
+      position: relative;
+      transition: all 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #83c6b9;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .parallax-bg {
+      background-image: url('./Downloads/blinds.webp');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    .scroll-down {
+      animation: bounce 2s infinite;
+    }
+    .bg-alt {
+      background-color: #f1f6f5;
+    }
+/* Keyframes must be defined manually in raw CSS */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

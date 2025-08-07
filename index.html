@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Grove Blind & Shutter Co. provides bespoke shutters and blinds across Greater Manchester. Discover luxury window treatments designed for elegance, insulation, and lasting style." />
-  <title>Luxury Shutters & Blinds in Greater Manchester | Grove Blind & Shutter Co.</title>
+  <meta name="description" content="Bespoke shutters & blinds in Greater Manchester. Grove Blinds delivers elegant, made-to-measure window treatments for every room." />
+  <title>Luxury Shutters in Greater Manchester | Grove Blind & Shutter Co.</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,34 +36,7 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#83c6b9',
-            dark: '#083c3a'
-          },
-          fontFamily: {
-            serif: ['Playfair Display', 'serif'],
-            sans: ['Inter', 'sans-serif']
-          },
-          keyframes: {
-            'fade-in-up': {
-              '0%': { opacity: '0', transform: 'translateY(20px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            }
-          },
-          animation: {
-            'fade-in-up': 'fade-in-up 1s ease-out forwards'
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="dist/output.css">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -71,46 +44,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <!-- Alpine.js -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Open Graph -->
+<meta property="og:title" content="Luxury Shutters in Greater Manchester | Grove Blind & Shutter Co.">
+<meta property="og:description" content="Elegant, made-to-measure shutters and blinds handcrafted for your home. Book your free appointment today.">
+<meta property="og:image" content="https://groveblindsuk.com/images/logo.webp">
+<meta property="og:url" content="https://groveblindsuk.com">
+<meta property="og:type" content="website">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .nav-link {
-      position: relative;
-      transition: all 0.3s;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #83c6b9;
-      transition: width 0.3s;
-    }
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    .parallax-bg {
-      background-image: url('./Downloads/blinds.jpg');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-    .scroll-down {
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-  </style>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luxury Shutters in Greater Manchester | Grove Blind & Shutter Co.">
+<meta name="twitter:description" content="Elegant, made-to-measure shutters and blinds handcrafted for your home.">
+<meta name="twitter:image" content="https://groveblindsuk.com/images/logo.webp">
+
+
 </head>
 <body class="bg-white text-black font-sans">
 
@@ -123,7 +70,7 @@
 
 
   <!-- HERO SECTION -->
-  <section class="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center" style="background-image: url('./images/blinds.jpg');">
+  <section class="relative bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-center" style="background-image: url('./images/blinds.webp');">
     <div class="absolute inset-0 bg-white/60 backdrop-blur-md"></div>
     <div class="relative z-10 max-w-4xl px-6 animate-fade-in-up" data-aos="fade-up">
       <h1 class="text-5xl md:text-7xl font-serif font-semibold text-dark leading-tight transition-all duration-500 hover:tracking-wide">Grove Blind & Shutter Co.</h1>
@@ -200,7 +147,7 @@
     <!-- Gareth -->
     <div class="flex flex-col items-center text-center space-y-6" data-aos="fade-right">
       <div class="w-40 h-40 rounded-full overflow-hidden shadow-lg">
-        <!--<img src="/images/gareth.jpg" alt="Gareth" class="w-full h-full object-cover">-->
+        <!--<img src="/images/gareth.webp" alt="Gareth" class="w-full h-full object-cover">-->
       </div>
       <div>
         <h4 class="text-2xl font-serif font-semibold text-dark">Gareth</h4>
@@ -214,7 +161,7 @@
     <!-- Gavin -->
     <div class="flex flex-col items-center text-center space-y-6" data-aos="fade-left" data-aos-delay="150">
       <div class="w-40 h-40 rounded-full overflow-hidden shadow-lg">
-        <!--<img src="/images/gavin.jpg" alt="Gavin" class="w-full h-full object-cover">-->
+        <!--<img src="/images/gavin.webp" alt="Gavin" class="w-full h-full object-cover">-->
       </div>
       <div>
         <h4 class="text-2xl font-serif font-semibold text-dark">Gavin</h4>
@@ -268,30 +215,31 @@
       <h2 class="text-5xl font-serif text-dark mb-12">Our Work</h2>
       <p class="text-lg max-w-3xl mx-auto text-gray-600 mb-20">Each installation is a reflection of our commitment to beauty, precision, and bespoke craftsmanship.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
-        <a class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" data-gallery="grove-gallery">
-          <img src="/images/gallery_1.webp" alt="Shutter installation 1" class="w-full h-full object-cover" />
-        </a>
-        <a class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" data-gallery="grove-gallery">
-          <img src="/images/gallery_2.webp" alt="Shutter installation 2" class="w-full h-full object-cover" />
-        </a>
-        <a class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" data-gallery="grove-gallery">
-          <img src="/images/gallery_3.webp" alt="Shutter installation 3" class="w-full h-full object-cover" />
-        </a>
-        <a class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" data-gallery="grove-gallery">
-          <img src="/images/gallery_4.webp" alt="Shutter installation 4" class="w-full h-full object-cover" />
-        </a>
-        <a class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" data-gallery="grove-gallery">
-          <img src="/images/gallery_5.webp" alt="Shutter installation 5" class="w-full h-full object-cover" />
-        </a>
-        <a class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" data-gallery="grove-gallery">
-          <img src="/images/gallery_6.webp" alt="Shutter installation " class="w-full h-full object-cover" />
-        </a>
-      </div>
+  <a href="/pages/our-shutters.html" class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" title="Explore this shutter style">
+    <img src="/images/gallery_1.webp" alt="Full height white shutters in elegant living room" class="w-full h-full object-cover" />
+  </a>
+  <a href="/pages/our-shutters.html" class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" title="Explore this shutter style">
+    <img src="/images/gallery_2.webp" alt="Tier-on-tier shutters in bay window installation" class="w-full h-full object-cover" />
+  </a>
+  <a href="/pages/our-shutters.html" class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" title="Explore this shutter style">
+    <img src="/images/gallery_3.webp" alt="Solid panel shutters in stylish bedroom setting" class="w-full h-full object-cover" />
+  </a>
+  <a href="/pages/our-shutters.html" class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" title="Explore this shutter style">
+    <img src="/images/gallery_4.webp" alt="Café style shutters with natural light filtering" class="w-full h-full object-cover" />
+  </a>
+  <a href="/pages/our-shutters.html" class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" title="Explore this shutter style">
+    <img src="/images/gallery_5.webp" alt="Modern waterproof shutters in luxury bathroom" class="w-full h-full object-cover" />
+  </a>
+  <a href="/pages/our-shutters.html" class="glightbox group overflow-hidden rounded-2xl shadow-md transform transition duration-500 hover:scale-105" title="Explore this shutter style">
+    <img src="/images/gallery_6.webp" alt="Living room with bespoke window shutters" class="w-full h-full object-cover" />
+  </a>
+</div>
+
     </div>
   </section>
 
 <!-- Why Choose Us -->
-<section id="why" class="bg-[#f9f9f9] py-24 px-6 md:px-20">
+<section id="why" class="bg-alt py-24 px-6 md:px-20">
   <div class="max-w-7xl mx-auto text-center" data-aos="fade-up">
     <h2 class="text-5xl font-serif text-dark text-center mb-12">Why Choose Grove?</h2>
     <div class="grid md:grid-cols-3 gap-10">
@@ -308,8 +256,24 @@
         <p class="text-gray-600 font-sans">With 25+ years of experience and glowing local reviews, Grove is a name synonymous with service and satisfaction.</p>
       </div>
     </div>
+    
   </div>
 </section>
+
+<section class="bg-[#f9f9f9]  py-32 px-6 md:px-12 text-gray-800">
+  <div class="max-w-7xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-5xl font-serif text-dark mb-8">Our Shutter Collection</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-600 mb-10">
+      Each shutter we craft is made-to-measure, styled with elegance, and installed with care. Explore the styles homeowners across Greater Manchester love most-from <em>full height</em> to <em>tier-on-tier</em>, <em>café style</em> to <em>solid panel</em>, and more.
+    </p>
+
+    <a href="pages/our-shutters.html" 
+       class="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-medium transition hover:bg-dark transform hover:scale-105 shadow-md">
+      Click here to view our incredible selection of shutters
+    </a>
+  </div>
+</section>
+
 
   <!-- AREAS WE COVER -->
 <section id="coverage" class="bg-white text-gray-800 py-24 px-6 md:px-12 overflow-hidden">
@@ -334,7 +298,7 @@
   </section>
 
   <!-- TESTIMONIALS SECTION -->
-<section id="testimonials" class="bg-white py-32 px-6 md:px-12 overflow-hidden relative">
+<section id="testimonials" class="bg-a py-32 px-6 md:px-12 overflow-hidden relative">
   <div class="max-w-6xl mx-auto text-center relative">
     <h2 class="text-5xl font-serif text-dark text-center mb-12" data-aos="fade-up">Kind Words From Our Clients</h2>
 
